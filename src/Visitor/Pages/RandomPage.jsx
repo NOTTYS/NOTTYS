@@ -180,12 +180,12 @@ function RandomPage(props) {
                   style={{
                     backgroundColor: `${randomColor({
                       format: "rgb",
-                      luminosity: "dark",
+                      luminosity: "light",
                     })}`,
                   }}
-                  className="itemNumber"
+                  className="itemNumber border border-1"
                 >
-                  <h2 className="number text-center fw-bold text-white fw-bold">{e.number}</h2>
+                  <h2 className="number text-center fw-bold text-dark fw-bold fs-bold">{e.number}</h2>
                 </li>
               );
             })}

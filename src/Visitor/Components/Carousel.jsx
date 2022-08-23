@@ -34,7 +34,7 @@ function Carousels({slides}) {
   return (
     <div>
       <div>
-     <Carousel>
+     <Carousel className='shadow'>
       <Carousel.Item>
         <img
         height={650}

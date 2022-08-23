@@ -147,6 +147,7 @@
 
 .Nav {
     align-items: center;
+    margin-left: 250px
 }
 
 .navbar-toggler {
@@ -199,6 +200,12 @@
         font-size: 40px;
         margin-left: 10px;
     }
+
+    .itemLogin {
+        color: black;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -212,6 +219,15 @@
 
     .logo:hover {
         transform: scale(1.1);
+    }
+
+    .Nav {
+        align-items: center;
+        margin-left: 0px
+    }
+
+    .itemLogin {
+        color: black;
     }
 }
 
@@ -300,6 +316,15 @@
         margin-left: 10px;
     }
 
+    .Nav {
+        align-items: center;
+        margin-left: 0px
+    }
+
+    .itemLogin {
+        color: black;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -313,6 +338,15 @@
 
     .logo:hover {
         transform: scale(1.1);
+    }
+
+    .Nav {
+        align-items: center;
+        margin-left: 0px
+    }
+
+    .itemLogin {
+        color: black;
     }
 }
 

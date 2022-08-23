@@ -43,7 +43,7 @@ function Navbarr() {
           </Nav> */}
           <Nav
           className='Nav'
-            style={{ height: "auto" , marginLeft: 200}}
+            style={{ height: "auto"}}
           >
             <Nav.Link><Link className='item' to='/'>ຫນ້າຫລັກ</Link></Nav.Link>
             <Nav.Link><Link className='item' to='/Random'>ຫນ້າສຸ່ມ</Link></Nav.Link>

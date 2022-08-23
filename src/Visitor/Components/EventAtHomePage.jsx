@@ -18,9 +18,9 @@ function EventAtHome() {
       <div className='form h-auto'>
         <div className='row justify-content-center'>
           {data.map((e) =>
-            <div className='cardBox justify-items-center'>
+            <div className='cardBox justify-items-center '>
               
-                <Card key={e.id} className='mt-4 mx-2'>
+                <Card key={e.id} className='mt-4 mx-3 shadow'>
                 <Link to='/DetailEvent'>
                   <img className='shadow-sm imgZoom w-100 h-25' src={e.image} alt="" />
                   </Link>
