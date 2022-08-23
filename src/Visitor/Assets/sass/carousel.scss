@@ -1,0 +1,97 @@
+// .container {
+//     min-height: 100vh;
+//     display: flex;
+//     justify-content: center;
+// }
+
+// .carousel {
+//     margin: 0 auto;
+//     overflow: hidden;
+//     width: max-content;
+// }
+
+// .carousel-inner {
+//     white-space: nowrap;
+//     transition: ease 1.5s;
+// }
+
+// .carousel-item {
+//     display: inline-block;
+//     width: 100%;
+// }
+
+// .image {
+//     width: 100%;
+//     height: 600px;
+// }
+
+// .carousel-control {
+//     border: none;
+//     display: inline-block;
+//     position: absolute;
+//     height: 70px;
+//     width: 70px;
+//     top: calc(50% - 25px);
+//     color: white;
+//     font-size: larger;
+//     cursor: pointer;
+//     background-color: rgba(51, 49, 49, 0.8);
+
+// }
+
+// .buttons {
+//     justify-content: space-between;
+// }
+
+.carousel-control-prev-icon {
+  background-color: black;
+  padding: 30px;
+  border-radius: 100px;
+}
+.carousel-control-next-icon {
+  background-color: black;
+  padding: 30px;
+  border-radius: 100px;
+}
+
+.carousel {
+  opacity: 100px;
+}
+
+// button {
+//     border-radius: 50%;
+//     height: 20px !important;
+//     width: 20px !important;
+// }
+
+.carousel-size {
+  height: 660px;
+}
+
+.product-image {
+  width: 100%;
+  height: 300px;
+}
+.img-fluid {
+  width: auto;
+  height: 700px;
+}
+
+
+@media screen and (max-width: 1300px) {
+  .img-fluid {
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .img-fluid {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .img-fluid {
+    height: 250px;
+  }
+}

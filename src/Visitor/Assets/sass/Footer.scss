@@ -1,0 +1,9 @@
+.footer {
+    background-color: #5B6C8F;
+}
+
+@media screen and (max-width: 560px) {
+    .footer {
+        flex: auto;
+    }
+}

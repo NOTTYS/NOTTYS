@@ -1,0 +1,36 @@
+.cardBox {
+    border-color: gainsboro;
+    border-radius: 0;
+    width: 30rem;
+    
+    .card-body {
+        height: 10rem;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+.card-img-top {
+    border-color: black;
+    border-radius: 0%;
+    width: auto;
+    
+}
+
+.form {
+    height: 400px;
+}
+
+.btn {
+    background-color: #00D7FF;
+    border: none;
+    font-weight: bold;
+}
+
+.imgZoom {
+    transition: transform .2s;
+}
+.imgZoom:hover {
+    transform: scale(1.05);
+}

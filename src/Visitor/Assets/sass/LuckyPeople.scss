@@ -1,0 +1,86 @@
+.cardbox {
+    border-radius: 10px;
+    border-color: #00D7FF;
+
+    .prize {
+        background-color: #00D7FF;
+        border-radius: 10px;
+        padding: 5px;
+        font-weight: bold;
+    }
+
+    .name {
+        font-weight: bold;
+    }
+}
+
+.css-1s2u09g-control {
+    padding: 6px;
+}
+
+.button {
+    font-weight: bold;
+    background-color: #00D7FF;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    transition: transform .2s;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid;
+    border-color: blue;
+    transform: scale(1.1);
+}
+
+.paginationBtn {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+    a {
+        background-color: white;
+        padding: 15px;
+        margin: 0px;
+        border-radius: 5px;
+        border: 1px solid;
+        color: black;
+        text-decoration: none;
+        border-radius: 10px;
+    }
+
+    :hover {
+        font-weight: bold;
+        color: white;
+        background-color: #00D7FF;
+    }
+}
+
+.paginationActive {
+    color: white;
+
+    a {
+        font-weight: bold;
+        background-color: #00D7FF;
+    }
+}
+
+.formCard {
+    height: 800px;
+
+    @media screen and (max-width: 1400px) {
+        height: 1000px;
+    }
+
+    @media screen and (max-width: 991px) {
+        height: 1400px;
+    }
+
+    @media screen and (max-width: 767px) {
+        height: 2570px;
+    }
+}
