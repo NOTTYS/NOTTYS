@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock } from '@fortawesome/free-solid-svg-icons';
 
-
 function EventAtHome() {
 
   return (
@@ -15,10 +14,10 @@ function EventAtHome() {
         
         position="relative"/> */}
       <div className='mt-5 w-100'>
-        <p className='fs-1 fw-bold textActivity text-center'>ກິດຈະກຳ</p>
+        <p className='fs-1 fw-bold textActivity text-center' >ກິດຈະກຳ</p>
       </div>
       <div className='form position-relative ps-3 backgroundEvent'>
-        <div className='row w-100 justify-content-center position-absolute Event'>
+        <div className='row w-100 justify-content-center position-absolute Event' data-aos='fade-left' data-aos-duration="2000">
           {data.map((e) =>
             <div className='cardBox justify-items-center imgZoom'>
 

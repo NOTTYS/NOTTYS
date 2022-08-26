@@ -4,7 +4,6 @@ import '../Assets/sass/renderPageNumbers.scss'
 import LuckyPeople from '../Components/LuckyPeople';
 
 function LuckyListName() {
-
   return (
     <div>
         <LuckyPeople/>

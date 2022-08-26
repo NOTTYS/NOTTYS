@@ -6,8 +6,6 @@ import LuckyListName from '../Pages/LuckyListName'
 import About from '../Pages/About'
 import DetailEvent from '../Pages/DetailEvent'
 import RandomPage from '../Pages/RandomPage'
-import Sidebar from '../../Employee/Layouts/Sidebar/Sidebar'
-
 
 function route() {
   return (

@@ -6,8 +6,11 @@ import { useState } from 'react'
 import '../Assets/sass/LuckyPeople.scss'
 import '../Assets/sass/LuckyName.scss'
 import ReactPaginate from 'react-paginate';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function LuckyPeople() {
+  AOS.init()
   const [select, setSelect] = useState()
 
   const [data, setData] = useState(LuckyGuys.slice(0, 20))
@@ -42,7 +45,7 @@ function LuckyPeople() {
   const pageVisited = pageNumber * itemsPerPage
   const displayUsers = data.slice(pageVisited, pageVisited + itemsPerPage).map(e => {
     return (
-      <div key={e.id} className='mx-3 mb-4 luckybox shadow' style={{ width: '18rem' }}>
+      <div key={e.id} className='mx-3 mb-4 luckybox shadow' style={{ width: '18rem' }} data-aos="fade-up" data-aos-duration="500">
         <p className='mt-4 text-center fw-bold fs-3 textColor'>{`${e.firstname}`} <br /> {`${e.lastname}`}</p>
         <hr className='line' />
         <p className='mt-4 text-center fw-bold fs-3 textColor'>{`ເລກບິນ`} <br /> {`${e.prize}`}</p>
@@ -75,6 +78,7 @@ function LuckyPeople() {
               value={select}
               onChange={getInput}
               options={LuckyGuys}
+              data-aos="fade"
             />
             <button onClick={reset} className='ms-3 buttonReset'>Reset</button>
           </div>
@@ -84,25 +88,22 @@ function LuckyPeople() {
             }
           </div>
           {console.log(select)}
-          <div className='row justify-content-center justify-items-center '>
+          <div className='row justify-content-center justify-items-center' data-aos="fade-up" data-aos-duration="1000">
             {data.length == null ?
               displayUsers
               : LuckyGuys.filter(e => e.value === select).map((e, i) =>
-                <div key={e.id} className='mx-3 mb-4 luckybox shadow' style={{ width: '18rem' }}>
+                <div key={e.id} className='mx-3 mb-4 luckybox shadow' style={{ width: '18rem' }} data-aos="fade-up" data-aos-duration="500">
                   <p className='mt-4 text-center fw-bold fs-3 textColor'>{`${e.firstname}`} <br /> {`${e.lastname}`}</p>
                   <hr className='line' />
                   <p className='mt-4 text-center fw-bold fs-3 textColor'>{`ເລກບິນ`} <br /> {`${e.prize}`}</p>
                   <p className='text-center fw-bold fs-3 text-center fw-bold fs-3 backgroundPrize py-3'>{`ລາງວັນ: ${e.prize}`}</p>
                 </div>
               )}
-
           </div>
-
         </div>
-
       </div>
       <div className='mb-5 p-1 position-static'>
-        {LuckyGuys.length > 12 ?  <ReactPaginate
+        {LuckyGuys.length >= 12 ?  <ReactPaginate
           previousLabel={"<"}
           nextLabel={">"}
           pageCount={pageCount}

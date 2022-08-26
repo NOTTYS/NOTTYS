@@ -10,9 +10,11 @@ import Modal from "react-bootstrap/Modal";
 import Confetti from "react-confetti";
 import Select from "react-select";
 import LuckyGuys from '../JSON/LuckyGuys.json'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function RandomPage(props) {
-
+AOS.init()
   let randNumber = Math.floor(Math.random() * name.length);
   let lucky = name[randNumber]
 
@@ -133,7 +135,7 @@ function RandomPage(props) {
         <h1 className="my-4 p-3 text-center fw-bold fs-2 backgroundText1">
           Spin ສຸ່ມລຸ້ນໂຊກ
         </h1>
-        <div style={{ height: 600 }}>
+        <div style={{ height: 600 }} data-aos="fade-up">
           <div className="border border-5 d-block mx-auto formRandom position-relative">
             <div
               onClick={() => Random()}
