@@ -3,6 +3,8 @@ import '../Assets/sass/Prize.scss'
 import { Button, Card } from 'react-bootstrap';
 import data from '../JSON/data.json'
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 
 function EventAtHome() {
@@ -12,31 +14,34 @@ function EventAtHome() {
       {/* <Iframe allow="fullscreen" url="https://www.youtube.com/embed/MjVD6oUtkSo"
         
         position="relative"/> */}
-      <div className='mt-5'>
-        <p className='fs-1 text-center fw-bold'>ກິດຈະກຳ</p>
+      <div className='mt-5 w-100'>
+        <p className='fs-1 fw-bold textActivity text-center'>ກິດຈະກຳ</p>
       </div>
-      <div className='form h-auto'>
-        <div className='row justify-content-center'>
+      <div className='form position-relative ps-3 backgroundEvent'>
+        <div className='row w-100 justify-content-center position-absolute Event'>
           {data.map((e) =>
-            <div className='cardBox justify-items-center '>
-              
-                <Card key={e.id} className='mt-4 mx-3 shadow'>
+            <div className='cardBox justify-items-center imgZoom'>
+
+              <Card key={e.id} className='mt-4 mx-3 shadow'>
                 <Link to='/DetailEvent'>
-                  <img className='shadow-sm imgZoom w-100 h-25' src={e.image} alt="" />
-                  </Link>
-                  {/* <Card.Img  variant="top" src={
+                  <img className='shadow-sm w-100 h-25' src={e.image} alt="" />
+                </Link>
+                {/* <Card.Img  variant="top" src={
                     e.image
                   } /> */}
-                  <Card.Body>
-                    <Card.Title className='text-center fw-bold text-black'>{e.name}</Card.Title>
-                    <Link to='/DetailEvent'><Button className='mt-5 d-block mx-auto w-50 fs-5 btn'>ເບິ່ງລາຍລະອຽດ</Button></Link>
-                  </Card.Body>
-                </Card>
-             
-                  
+                <Card.Body>
+                    <FontAwesomeIcon className='pe-2 text-muted' icon={faClock} fontSize={20}/><span className='text-muted'>{`12/09/2022-02/12/2022`}</span>
+                  <div className='text-truncate-container mt-2'>
+                    <p className='text-center text-black text-muted'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Q
+                      uo vel pariatur odio laborum aspernatur repellat placeat, ea repudiandae dolorem nemo, reprehenderit ipsum minima eum quos? Soluta, optio! Laboriosam qui natus consectetur nam molestiae quas maiores temporibus beatae, atque incidunt suscipit animi. Sed cumque possimus fugit rerum soluta molestias odit ratione!</p>
+                  </div>
+                </Card.Body>
+                <Link to='/DetailEvent'><Button className='mb-3 d-block mx-auto fs-5 btn'>ເບິ່ງລາຍລະອຽດ</Button></Link>
+              </Card>
             </div>
           )}
         </div>
+
       </div>
 
     </div>

@@ -7,8 +7,8 @@ function HomePage() {
   return (
     <div>
         <Carousels/>
-        <EventAtHome/>
         <LuckyNameAtHomePage/>
+        <EventAtHome/>
     </div>
   )
 }

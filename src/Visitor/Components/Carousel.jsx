@@ -2,6 +2,8 @@ import React from 'react'
 import '../Assets/sass/carousel.scss'
 import Carousel from 'react-bootstrap/Carousel';
 import image from '../Assets/images/1003880.png'
+import banner1 from '../Assets/images/banner-01.png'
+import banner2 from '../Assets/images/banner-02.png'
 
 function Carousels({slides}) {
 
@@ -34,40 +36,34 @@ function Carousels({slides}) {
   return (
     <div>
       <div>
-     <Carousel className='shadow'>
+     <Carousel
+     interval={5000}
+    className='shadow'>
+
       <Carousel.Item>
         <img
         height={650}
           className="w-100 img-fluid"
-          src='https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1295,h_720,f_auto/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/275c594a-Sarangkot-Sunrise-View/SarangkotSunriseView-Klook.jpg'
+          src={banner1}
           alt="First slide"
         />
         <Carousel.Caption>
 
         </Carousel.Caption>
       </Carousel.Item>
+
       <Carousel.Item>
         <img
         height={650}
           className="w-100 img-fluid"
-          src={image}
-          alt="Second slide"
+          src={banner2}
+          alt="First slide"
         />
         <Carousel.Caption>
 
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item >
-        <img
-        height={650}
-          className="w-100 img-fluid"
-          src={image}
-          alt="Third slide"
-        />
-        <Carousel.Caption>
 
-        </Carousel.Caption>
-      </Carousel.Item>
     </Carousel>
        {/* <div className='container'>
         <div className="carousel">

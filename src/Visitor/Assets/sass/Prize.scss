@@ -18,7 +18,8 @@
 }
 
 .form {
-    height: 400px;
+    height: 600px;
+    bottom: 0px;
 }
 
 .btn {
@@ -32,4 +33,47 @@
 }
 .imgZoom:hover {
     transform: scale(1.05);
+}
+
+.textActivity {
+    color: white;
+    background-color: #1576EC;
+    width: 100%;
+}
+
+.backgroundEvent {
+    background-color: #E5E9ECDE;
+    margin-top: 150px;
+    height: 650px;
+    background: linear-gradient(180deg, rgba(21, 118, 236, 0.72) 0%, rgba(21, 118, 236, 0) 70.31%);
+}
+
+.Event {
+    padding-right: 8px;
+    margin-top: -120px;
+}
+
+.text-truncate-container p{
+-webkit-line-clamp: 3;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+overflow: hidden;
+}
+
+@media screen and (max-width: 1449px) {
+    .backgroundEvent {
+        height: 1200px;
+    }
+}
+
+@media screen and (max-width: 969px) {
+    .backgroundEvent {
+        height: 1800px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .backgroundEvent {
+        height: 1600px;
+    }
 }

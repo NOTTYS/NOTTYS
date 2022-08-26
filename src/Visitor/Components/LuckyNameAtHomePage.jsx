@@ -6,63 +6,27 @@ import 'react-multi-carousel/lib/styles.css';
 import '../Assets/sass/LuckyName.scss'
 
 function LuckyNameAtHomePage() {
-  const LuckName = LuckyGuys.slice(0, 9)
+  const LuckName = LuckyGuys.slice(0, 4)
 
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 4
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 800, min: 0 },
-      items: 1
-    }
-  };
   return (
-    <div className='my-5'>
-      <p className='fs-1 text-center fw-bold'>ຊື່ຜູ້ໂຊກດີ</p>
-      <div className='shadow-sm my-4 py-5 w-75 d-block mx-auto bg rounded rounded-4'>
-        <div>
-          <Carousel
-            draggable={false}
-            showDots={true}
-            infinite={true}
-            swipeable={false}
-            ssr={true}
-            autoPlay={true}
-            autoPlaySpeed={3000}
-            responsive={responsive}
-            keyBoardControl={true}
-            dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-10-px"
-            className='carousel-luckyname'
-          >
-            {LuckName.map((e) => (
-              <div className='justify-content-center'>
-                <Card key={e.id} className='cardbox' style={{ width: '17rem' }}>
-                  <Card.Body>
-                    <Card.Title className='text-center fw-bold'>{`ຊື່ ${e.firstname} ${e.lastname}`}</Card.Title>
-                    <hr />
-                    <Card.Title className='text-center mb-3'>{`ງວດທີ ${e.value}`}</Card.Title>
-                    <Card.Title style={{backgroundColor: "#FF7F3F"}} className='text-center text-white prize'>{`${e.prize}`}</Card.Title>
-                  </Card.Body>
-                </Card>
-              </div>
-            ))}
-          </Carousel>
-
+    <div className='my-5 boxsize'>
+      <div className='shadow-sm w-100 d-block mx-auto backgroundLuckyName position-absolute'>
+        <p className='pt-3 float-end pe-3 viewAll'>ເບິ່ງຂໍ້ມູນທັງຫມົດ</p>
+        <div className='position-absolute text-center p-2 fs-1 backgroundLucky text-white fw-bold shadow'>
+          ຜູ້ໂຊກດີ
         </div>
-      </div>
+          <div className='pt-5 row justify-content-center w-100 CardLucky'>
+            {LuckName.map((e) =>
+              <div key={e.id} className='mx-3 mb-4 luckybox shadow' style={{ width: '18rem' }}>
+                  <p className='mt-4 text-center fw-bold fs-3 textColor'>{`${e.firstname}`} <br /> {`${e.lastname}`}</p>
+                  <hr className='line'/>
+                  <p className='mt-4 text-center fw-bold fs-3 textColor'>{`ເລກບິນ`} <br /> {`${e.prize}`}</p>
+                  <p className='text-center fw-bold fs-3 text-center fw-bold fs-3 backgroundPrize py-3'>{`ລາງວັນ: ${e.prize}`}</p>
+              </div>
+            )}
+          </div>
 
+      </div>
     </div>
   )
 }

@@ -4,6 +4,7 @@ import Body from '../src/Visitor/Layouts/Main/Body'
 import Footer from '../src/Visitor/Layouts/Footer/Footer'
 import Test from './Visitor/Pages/Test'
 import '../src/App.css';
+import 'a'
 
 function App() {
   return (

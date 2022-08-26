@@ -3,7 +3,7 @@ import '../Assets/sass/navbar.scss'
 import {Link} from 'react-router-dom'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '../Assets/images/logo.jpg'
+import logo from '../Assets/icon/SBSLOGO2.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,7 +15,7 @@ function Navbarr() {
               SBS Trade is the best choice for your life
             </div>
             <Navbar className='position-relative py-3' expand="lg">
-        <Navbar.Brand className='logoTop'><Link to='/'><img style={{top: -30}} className='position-absolute mb-5' height={140} src={logo} alt="" /></Link></Navbar.Brand>
+        <Navbar.Brand className='logoTop'><Link to='/'><img style={{top: 0}} className='position-absolute mb-5' height={90} src={logo} alt="" /></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="" />
         <Navbar.Collapse className='justify-content-between' id="">
           <Nav>
@@ -56,7 +56,7 @@ function Navbarr() {
           </Nav>
           <Nav>
           <FontAwesomeIcon className='mt-2 pe-3 faMoon zoom' icon={faMoon} fontSize={30}/>
-          <Nav.Link className='itemLogin'><Link to='/'>ຫນ້າ Login ຂອງພະນັກງານ</Link></Nav.Link>
+          <Nav.Link className='itemLogin'><Link to='/employee'>ຫນ້າ Login ຂອງພະນັກງານ</Link></Nav.Link>
           </Nav>
         </Navbar.Collapse>
     </Navbar>
