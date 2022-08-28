@@ -63,6 +63,11 @@
 
 .viewAll {
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+    :hover {
+        color: #1576EC;
+    }
 }
 
 .boxsize {

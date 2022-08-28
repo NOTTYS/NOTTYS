@@ -6,15 +6,18 @@ import Navbar from 'react-bootstrap/Navbar';
 import logo from '../Assets/icon/SBSLOGO2.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
+import { ThemeContext } from './Darkmode';
 
 function Navbarr() {
+  const [{theme, isDark}, toggleTheme] = useContext(ThemeContext);
   return (
     <div>
           <div className='bg-primary align-items-center'>
             <div className='text-center text-white top'>
               SBS Trade is the best choice for your life
             </div>
-            <Navbar className='position-relative py-3' expand="lg">
+            <Navbar style={{backgroundColor: theme.backgroundColor, color: theme.color}} className='position-relative py-3' expand="lg">
         <Navbar.Brand className='logoTop'><Link to='/'><img style={{top: 0}} className='position-absolute mb-5' height={90} src={logo} alt="" /></Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="" />
         <Navbar.Collapse className='justify-content-between' id="">
@@ -55,7 +58,7 @@ function Navbarr() {
               </NavDropdown> */}
           </Nav>
           <Nav>
-          <FontAwesomeIcon className='mt-2 pe-3 faMoon zoom' icon={faMoon} fontSize={30}/>
+          <FontAwesomeIcon onClick={toggleTheme} className='mt-2 pe-3 faMoon zoom' icon={faMoon} fontSize={30}/>
           <Nav.Link className='itemLogin'><Link to='/employee'>ຫນ້າ Login ຂອງພະນັກງານ</Link></Nav.Link>
           </Nav>
         </Navbar.Collapse>

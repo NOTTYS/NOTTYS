@@ -17,7 +17,7 @@ function EventAtHome() {
         <p className='fs-1 fw-bold textActivity text-center' >ກິດຈະກຳ</p>
       </div>
       <div className='form position-relative ps-3 backgroundEvent'>
-        <div className='row w-100 justify-content-center position-absolute Event' data-aos='fade-left' data-aos-duration="2000">
+        <div className='row w-100 justify-content-center position-absolute Event' data-aos='fade-left' data-aos-duration="1000">
           {data.map((e) =>
             <div className='cardBox justify-items-center imgZoom'>
 
